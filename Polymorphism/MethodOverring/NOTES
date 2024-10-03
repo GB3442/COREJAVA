@@ -1,0 +1,15 @@
+
+
+What is method Overriding?
+ans : - Redefining a method of parent into cbild class with the same method signature and paremeters is callled as
+        method overring.
+
+Rules of method overiding?
+
+1) We can not perform method overding in same class
+2) Overriding method must have to take exact same parameters of overridden method.
+3) We can not restrict the scope of overridden method.  i.e super classs public method can not be taken as private,
+   default or protected....           private > default > protected > public
+4) Final method can not be overide
+5) We can not overide private method
+6) We can not override static method if we do that then it will become a method hiding.

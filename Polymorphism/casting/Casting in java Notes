@@ -1,0 +1,46 @@
+
+WHat is Type Casting in java ?
+ans: Converting one type of variable into another type is called as tpye casting.
+
+Two tpyes of casting in java
+1) Upcasting / implicit / widening casting
+ans : Storing sub class object into super class reference variable is called as upcasting or implicit casting.
+
+2) DownCasting/explicit/ narrowing :
+ans : Storing super class object reference into sub class reference variable us called as dowmcasting.
+
+
+   ex:
+      class super{
+
+      }
+      class sub extends super{
+
+       public static void main(String[]args){
+
+           //implicit casting or upcasting
+           super s1=new sub();   // here no need to do casting explicitly.
+
+           // downcasting
+           sub s2=(sub)new super();    // here no CE but at runtime classCastException occoured
+
+            // this will perform downcasting.
+            sub s=(sub)s1;
+
+       }
+      }
+
+          =============== Importent point ========
+   In upcasting we can access only super class variables and method. We can access only overrided method of super class
+   in sub class. We can not access sub class variables and methods... except overrided methods.
+
+   in upcasting only sub class overrideen methods are accessible. IF we add another method in sub class then this method
+   is not accessible.
+
+
+   => In Java, we rarely use Upcasting. We use it when we need to develop a code that deals with only the parent class.
+   => Downcasting is used when we need to develop a code that accesses behaviors of the child class.
+
+
+
+   => We can not use super keyword in static method i.e main method.
