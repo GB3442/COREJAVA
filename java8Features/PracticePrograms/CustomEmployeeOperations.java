@@ -1,19 +1,27 @@
 package java8Features.PracticePrograms;
 
-import java.security.KeyStore;
 import java.util.*;
 import java.util.stream.Collectors;
 
 class Employee {
-    @Override
-    public String toString() {
-        return "Employee{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", gender='" + gender + '\'' + ", department='" + department + '\'' + ", yearOfJoining=" + yearOfJoining + ", salary=" + salary + '}';
-    }
-
     int id;
     String name;
     int age;
     String gender;
+    String department;
+    int yearOfJoining;
+    Double salary;
+
+    public Employee(int id, String name, int age, String gender, String department, int yearOfJoining, double salary) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.department = department;
+        this.yearOfJoining = yearOfJoining;
+        this.salary = salary;
+    }
+
 
     public int getId() {
         return id;
@@ -39,9 +47,7 @@ class Employee {
         this.age = age;
     }
 
-    public String getGender() {
-        return gender;
-    }
+    public String getGender() {return gender;}
 
     public void setGender(String gender) {
         this.gender = gender;
@@ -63,27 +69,14 @@ class Employee {
         this.yearOfJoining = yearOfJoining;
     }
 
-    public Double getSalary() {
-        return salary;
-    }
+    public Double getSalary() {return salary;}
 
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
+    public void setSalary(Double salary) {this.salary = salary;}
 
-    public Employee(int id, String name, int age, String gender, String department, int yearOfJoining, double salary) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.department = department;
-        this.yearOfJoining = yearOfJoining;
-        this.salary = salary;
+    @Override
+    public String toString() {
+        return "Employee{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", gender='" + gender + '\'' + ", department='" + department + '\'' + ", yearOfJoining=" + yearOfJoining + ", salary=" + salary + '}';
     }
-
-    String department;
-    int yearOfJoining;
-    Double salary;
 
 
 }
